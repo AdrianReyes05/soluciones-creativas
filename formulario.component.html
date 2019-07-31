@@ -1,0 +1,132 @@
+<div class="mensaje">
+  <form>
+    <div class="col-md-12 mt-3" align="center">
+      <h1><b>Vamos que esperas para registrarte</b></h1>
+    </div>
+    <div>
+      <p>
+        Ingrese sus datos para su inscripción y obten un 5% de descuento en sus
+        compras.
+      </p>
+    </div>
+  </form>
+</div>
+<div class="campos">
+  <form>
+    <div class="col-md-12 mt-3">
+      <div>
+        <label>
+          Nombres:
+          <input
+            type="text"
+            placeholder="Nombres"
+            [(ngModel)]="crearUsuario.nombres"
+          />
+        </label>
+      </div>
+      <p>{{ nombres }}</p>
+
+      <div>
+        <label>
+          Apellidos:
+          <input
+            type="text"
+            placeholder="Apellidos"
+            [(ngModel)]="crearUsuario.apellidos"
+        /></label>
+      </div>
+      <div>
+        <label>
+          <div>
+            Cédula: <input type="text" [(ngModel)]="crearUsuario.cedula" />
+          </div>
+        </label>
+      </div>
+      <div>
+        <label>
+          <div>
+            Correo: <input type="email" [(ngModel)]="crearUsuario.correo" />
+          </div>
+        </label>
+      </div>
+      <div>
+        <label>
+          Contraseña:
+          <input type="password" [(ngModel)]="usuario.contrasena" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Confirmar Contraseña:
+          <input type="password" 
+        /></label>
+      </div>
+    </div>
+  </form>
+  <a class="boton" href="/p2"
+    ><button
+      (click)="
+        crearContacto(
+          crearUsuario.nombres,
+          crearUsuario.apellidos,
+          crearUsuario.cedula,
+          crearUsuario.telefono,
+          crearUsuario.correo
+        )
+      "
+    >
+      Registrarse
+    </button></a
+  >
+</div>
+<form>
+  <div class="col-md-12 mt-3" *ngFor="let usuario of usuarios">
+    <div>
+      <label>
+        Nombres:
+        <input
+          type="text"
+          placeholder="Nombres"
+          [(ngModel)]="crearUsuario.nombres"
+        />
+      </label>
+    </div>
+    <p>{{ nombres }}</p>
+
+    <div>
+      <label>
+        Apellidos:
+        <input
+          type="text"
+          placeholder="Apellidos"
+          [(ngModel)]="crearUsuario.apellidos"
+      /></label>
+    </div>
+    <div>
+      <label>
+        <div>
+          Cédula: <input type="text" [(ngModel)]="crearUsuario.cedula" />
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        <div>
+          Correo: <input type="email" [(ngModel)]="crearUsuario.correo" />
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        Contraseña:
+        <input type="password" [(ngModel)]="usuario.contrasena" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Confirmar Contraseña:
+        <input type="password" ng-model="confirmar contrasena"
+      /></label>
+    </div>
+  </div>
+</form>
